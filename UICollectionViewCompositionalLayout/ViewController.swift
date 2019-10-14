@@ -18,6 +18,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         case EstimatedGrid = "Estimated Grid"
         case NestedGroup = "Nested Grouping"
         case Sections = "Sections"
+        case AppStoreLike = "AppStore"
     }
     
     
@@ -77,12 +78,14 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         
         var viewController: UIViewController!
         switch menuItem {
-        case .EstimatedGrid:
-            viewController = EstimatedGridViewController()
-        case .NestedGroup:
-            viewController = ComplexGroupViewController()
-        case .Sections:
-            viewController = SectionsViewController()
+            case .EstimatedGrid:
+                viewController = EstimatedGridViewController()
+            case .NestedGroup:
+                viewController = ComplexGroupViewController()
+            case .Sections:
+                viewController = SectionsViewController()
+            case.AppStoreLike:
+                viewController = AppStoreLikeController()
         }
         
         navigationController?.pushViewController(viewController, animated: true)
